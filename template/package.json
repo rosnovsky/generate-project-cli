@@ -1,35 +1,24 @@
 {
-  "name": "cli-create-project",
-  "version": "0.0.1",
-  "description": "A CLI for creating new projects",
-  "main": "./dist/index.ts",
-  "bin": "./dist/index.js",
+  "name": "create-project",
+  "version": "1.0.1",
+  "description": "Project Description",
+  "main": "index.js",
   "engines": {
     "node": ">=20.5.1"
   },
   "scripts": {
-    "dev": "node --loader ts-node/esm ./src/index.ts",
-    "build": "tsc",
-    "start": "tsc && node ./dist/index.js",
+    "build": "echo \"Warning: no build specified\" && exit 0",
     "commit": "cz",
     "release": "standard-version",
     "prepare": "husky install",
     "test": "echo \"Warning: no test specified\" && exit 0"
   },
-  "keywords": [
-    "cli",
-    "create",
-    "project"
-  ],
-  "author": {
-    "name": "Art Rosnovsky",
-    "email": "art@rosnovsky.us",
-    "url": "https://rosnovsky.us"
-  },
-  "license": "MIT",
+  "keywords": [],
+  "author": "Name <email>",
+  "license": "ISC",
   "private": true,
   "repository": {
-    "url": "https://github.com/rosnovsky/cli-create-project.git",
+    "url": "https://...",
     "type": "git"
   },
   "devDependencies": {
@@ -40,8 +29,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^15.1.0",
     "prettier": "3.1.0",
-    "standard-version": "^9.5.0",
-    "ts-node": "^10.9.1"
+    "standard-version": "^9.5.0"
   },
   "config": {
     "commitizen": {
@@ -50,9 +38,5 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
-  },
-  "dependencies": {
-    "@types/figlet": "^1.5.8",
-    "figlet": "^1.7.0"
   }
 }

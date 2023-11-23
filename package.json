@@ -1,35 +1,48 @@
 {
-  "name": "create-project",
-  "version": "1.0.1",
-  "description": "Project Description",
-  "main": "index.js",
+  "name": "cli-create-project",
+  "version": "0.0.1",
+  "description": "A CLI for creating new projects",
+  "main": "./dist/index.ts",
+  "bin": "./dist/index.js",
   "engines": {
     "node": ">=20.5.1"
   },
   "scripts": {
-    "build": "echo \"Warning: no build specified\" && exit 0",
+    "dev": "node --loader ts-node/esm ./src/index.ts",
+    "build": "tsc",
+    "start": "tsc && node ./dist/index.js",
     "commit": "cz",
     "release": "standard-version",
     "prepare": "husky install",
     "test": "echo \"Warning: no test specified\" && exit 0"
   },
-  "keywords": [],
-  "author": "Name <email>",
-  "license": "ISC",
+  "keywords": [
+    "cli",
+    "create",
+    "project"
+  ],
+  "author": {
+    "name": "Art Rosnovsky",
+    "email": "art@rosnovsky.us",
+    "url": "https://rosnovsky.us"
+  },
+  "license": "MIT",
   "private": true,
   "repository": {
-    "url": "https://...",
+    "url": "https://github.com/rosnovsky/cli-create-project.git",
     "type": "git"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
+    "@types/node": "^20.9.5",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.1.0",
     "prettier": "3.1.0",
-    "standard-version": "^9.5.0"
+    "standard-version": "^9.5.0",
+    "ts-node": "^10.9.1"
   },
   "config": {
     "commitizen": {
@@ -38,5 +51,9 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "dependencies": {
+    "@types/figlet": "^1.5.8",
+    "figlet": "^1.7.0"
   }
 }

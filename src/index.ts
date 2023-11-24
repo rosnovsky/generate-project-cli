@@ -1,6 +1,8 @@
-const figlet = require("figlet");
-const chalk = require("chalk");
-const pkgJSON = require("../package.json");
+import figlet from "figlet";
+import chalk from "chalk";
+import fs from "node:fs";
+
+const pkgJSON = JSON.parse(fs.readFileSync("./package.json", "utf-8"));
 
 console.log(
   chalk.green(

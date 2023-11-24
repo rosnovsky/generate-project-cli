@@ -31,8 +31,9 @@
   },
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/rosnovsky/cli-create-project.git",
-    "type": "git"
+    "url": "https://github.com/rosnovsky/generate-project-cli.git",
+    "type": "git",
+    "directory": "dist"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
@@ -57,6 +58,7 @@
   },
   "dependencies": {
     "chalk": "^5.3.0",
-    "figlet": "^1.7.0"
+    "figlet": "^1.7.0",
+    "typescript": "^5.3.2"
   }
 }

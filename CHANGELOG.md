@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/rosnovsky/generate-project-cli/compare/v0.0.10...v0.0.11) (2023-11-24)
+
+### Bug Fixes
+
+- fix issues with package.json & npm registry ([1471783](https://github.com/rosnovsky/generate-project-cli/commit/1471783967ff156e70f857a2dd733dad22c064a7))
+
 ### [0.0.10](https://github.com/rosnovsky/generate-project-cli/compare/v0.0.9...v0.0.10) (2023-11-24)
 
 ### Bug Fixes

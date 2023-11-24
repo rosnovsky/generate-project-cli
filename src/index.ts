@@ -15,7 +15,7 @@ try {
 }
 console.log(
   chalk.green(
-    figlet.textSync("Create Project CLI", {
+    figlet.textSync("Generate Project", {
       font: "Small",
       horizontalLayout: "default",
       verticalLayout: "fitted",

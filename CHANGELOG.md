@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/rosnovsky/generate-project-cli/compare/v0.0.9...v0.0.10) (2023-11-24)
+
+### Bug Fixes
+
+- remove extra console.logs ([7774982](https://github.com/rosnovsky/generate-project-cli/commit/7774982d256fd3885bee2d749ae50768b6082864))
+
 ### [0.0.9](https://github.com/rosnovsky/generate-project-cli/compare/v0.0.4...v0.0.9) (2023-11-24)
 
 ### Features

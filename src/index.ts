@@ -1,10 +1,13 @@
+import { generateProject } from "./utils/generate.js";
 import { init } from "./utils/init.js";
 import { userPrompts } from "./utils/prompts.js";
 
-function main() {
+async function main() {
   init();
 
-  userPrompts();
+  const projectInfo = await userPrompts();
+
+  generateProject(projectInfo);
 }
 
 main();

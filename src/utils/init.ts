@@ -15,7 +15,7 @@ let pkgJSON: Record<string, any>;
 try {
   pkgJSON = JSON.parse(fs.readFileSync(packagePath, "utf8"));
 } catch (err) {
-  console.error(err);
+  console.error("Failed to parse package.json", err);
   process.exit(1);
 }
 

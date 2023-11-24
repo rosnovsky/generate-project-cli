@@ -53,7 +53,6 @@ export const userPrompts = async () => {
     }
 
     actions = { ...actions, ...response };
-    console.log(actions);
   }
 
   const {

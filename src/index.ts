@@ -2,8 +2,17 @@ import figlet from "figlet";
 import chalk from "chalk";
 import fs from "node:fs";
 
-const pkgJSON = JSON.parse(fs.readFileSync("./package.json", "utf-8"));
-
+let pkgJSON: Record<string, any>;
+try {
+  pkgJSON = JSON.parse(fs.readFileSync("./package.json", "utf-8"));
+} catch (err) {
+  console.error(
+    chalk.red.bold(
+      "Could not find a package.json in the current directory. Please make sure you are in the root of your project.",
+    ),
+  );
+  process.exit(1);
+}
 console.log(
   chalk.green(
     figlet.textSync("Create Project CLI", {

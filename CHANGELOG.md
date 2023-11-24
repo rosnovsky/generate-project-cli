@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/rosnovsky/generate-project-cli/compare/v0.0.11...v0.0.13) (2023-11-24)
+
+### Bug Fixes
+
+- fix missing binary in package.json ([aea73eb](https://github.com/rosnovsky/generate-project-cli/commit/aea73eb0d1bb20c12208797d44b12f7f2e9a13e1))
+- troubleshooting publishing to npm ([a49f4ff](https://github.com/rosnovsky/generate-project-cli/commit/a49f4ff97b78b184dca2508b88a23d9f8a87d7fc))
+
 ### [0.0.11](https://github.com/rosnovsky/generate-project-cli/compare/v0.0.10...v0.0.11) (2023-11-24)
 
 ### Bug Fixes

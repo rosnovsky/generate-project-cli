@@ -18,6 +18,7 @@ export const userPrompts = () =>
       console.log("See you back soon!");
       process.exit(0);
     }
+
     prompts([
       {
         type: "text",
@@ -30,17 +31,29 @@ export const userPrompts = () =>
       prompts([
         {
           type: "select",
-          name: "type",
+          name: "git",
           message: "Initialize git?",
           choices: [
-            { title: "Yes", value: "git" },
-            { title: "No", value: "noGit" },
+            { title: "Yes", value: "true" },
+            { title: "No", value: "false" },
           ],
         },
       ]).then((res3: any) => {
-        console.log(
-          `Building "${res.type}"-type project called "${res2.name}"`,
-        );
+        prompts([
+          {
+            type: "select",
+            name: "deps",
+            message: "Install dependencies?",
+            choices: [
+              { title: "Yes", value: "true" },
+              { title: "No", value: "false" },
+            ],
+          },
+        ]).then((res4: any) => {
+          console.log(
+            `Building "${res.type}"-type project called "${res2.name}. Will initialize git: ${res3.git}. Will install dependencies: ${res4.deps}"`,
+          );
+        });
       });
     });
   });

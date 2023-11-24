@@ -8,21 +8,19 @@ export const clearConsole = () => {
   );
 };
 
+const packagePath = process.argv[1].split("/dist")[0] + "/package.json";
+
+let pkgJSON: Record<string, any>;
+
+try {
+  pkgJSON = JSON.parse(fs.readFileSync(packagePath, "utf8"));
+} catch (err) {
+  console.error(err);
+  process.exit(1);
+}
+
 export const init = () => {
   clearConsole();
-
-  let pkgJSON: Record<string, any>;
-
-  try {
-    pkgJSON = JSON.parse(fs.readFileSync("./package.json", "utf-8"));
-  } catch (err) {
-    console.error(
-      chalk.red.bold(
-        "Could not find a package.json in the current directory. Please make sure you are in the root of your project.",
-      ),
-    );
-    process.exit(1);
-  }
 
   console.log(
     chalk.green(

@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/rosnovsky/generate-project-cli/compare/v0.0.3...v0.0.4) (2023-11-24)
+
 ### [0.0.3](https://github.com/rosnovsky/cli-create-project/compare/v0.0.2...v0.0.3) (2023-11-24)
 
 ### Bug Fixes

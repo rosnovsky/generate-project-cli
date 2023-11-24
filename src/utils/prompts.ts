@@ -43,7 +43,7 @@ const questions: Prompt[] = [
 ];
 
 export const userPrompts = async () => {
-  let actions = [];
+  let actions = {} as any;
   for (const question of questions) {
     const response = await prompts([question]);
 
@@ -52,25 +52,29 @@ export const userPrompts = async () => {
       process.exit(0);
     }
 
-    actions.push(response);
+    actions = { ...actions, ...response };
+    console.log(actions);
   }
 
-  const [projectType, projectName, initializeGit, installDeps] = actions;
-  const projectSlug = slugify.default(projectName.name);
+  const {
+    type: projectType,
+    name: projectName,
+    git: initializeGit,
+    deps: installDeps,
+  } = actions;
+  const projectSlug = slugify.default(projectName);
 
   console.log(
     `\n${chalk.bold("Here's what I'm going to do:")}
-    - Create a new folder called "${chalk.blue(
-      slugify.default(projectName.name),
-    )}"
-    - Create a new "${chalk.green(
-      projectType.type,
-    )}" project called "${chalk.blue(projectName.name)}" in this folder
+    - Create a new folder called "${chalk.blue(projectSlug)}"
+    - Create a new "${chalk.green(projectType)}" project called "${chalk.blue(
+      projectName,
+    )}" in this folder
     - I ${
-      initializeGit.git === "true" ? chalk.green("will") : chalk.red("will not")
+      initializeGit === "true" ? chalk.green("will") : chalk.red("will not")
     } initialize git
     - I ${
-      installDeps.deps === "true" ? chalk.green("will") : chalk.red("will not")
+      installDeps === "true" ? chalk.green("will") : chalk.red("will not")
     } install dependencies
     - Add all the goodies ${chalk.dim(
       "(README.md, prettier, commitlint, etc.)",
@@ -96,11 +100,11 @@ export const userPrompts = async () => {
   }
 
   const project = {
-    projectType: projectType.type,
-    projectName: projectName.name,
+    projectType: projectType,
+    projectName: projectName,
     projectSlug,
-    initializeGit: initializeGit.git === "true",
-    installDeps: installDeps.deps === "true",
+    initializeGit: initializeGit === "true",
+    installDeps: installDeps === "true",
   };
 
   return project;

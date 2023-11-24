@@ -2,8 +2,7 @@
   "name": "generate-project-cli",
   "version": "0.0.10",
   "description": "A CLI for generating new projects",
-  "main": "./dist/index.ts",
-  "bin": "./dist/index.js",
+  "main": "./dist/index.js",
   "type": "module",
   "engines": {
     "node": ">=20.5.1"
@@ -31,7 +30,7 @@
   },
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/rosnovsky/generate-project-cli.git",
+    "url": "git+https://github.com/rosnovsky/generate-project-cli.git",
     "type": "git",
     "directory": "dist"
   },

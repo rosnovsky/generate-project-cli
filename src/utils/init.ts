@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import figlet from "figlet";
 import chalk from "chalk";
+import updateNotifier from "update-notifier";
 
 export const clearConsole = () => {
   process.stdout.write(
@@ -10,10 +11,11 @@ export const clearConsole = () => {
 
 const packagePath = process.argv[1].split("/dist")[0] + "/package.json";
 
-let pkgJSON: Record<string, any>;
+let pkgJSON: any;
 
 try {
   pkgJSON = JSON.parse(fs.readFileSync(packagePath, "utf8"));
+  updateNotifier({ pkg: pkgJSON }).notify();
 } catch (err) {
   console.error("Failed to parse package.json", err);
   process.exit(1);

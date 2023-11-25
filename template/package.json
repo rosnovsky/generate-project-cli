@@ -1,11 +1,12 @@
 {
   "name": "create-project",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "description": "Project Description",
   "main": "index.js",
   "engines": {
-    "node": ">=20.5.1"
+    "node": ">=20.5.0"
   },
+  "engineStrict": true,
   "scripts": {
     "build": "echo \"Warning: no build specified\" && exit 0",
     "commit": "cz",

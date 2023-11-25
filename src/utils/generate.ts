@@ -1,6 +1,7 @@
 import chalk from "chalk";
 import { ProjectInfo } from "./types.js";
 import fs from "node:fs";
+import { executeCommand, logger } from "./helpers.js";
 
 export async function generateProject(projectInfo: ProjectInfo) {
   const { projectSlug, initializeGit, installDeps } = projectInfo;
@@ -62,8 +63,18 @@ export async function generateProject(projectInfo: ProjectInfo) {
 
   // install dependencies
   if (installDeps) {
-    execSync("pnpm install", { cwd: projectPath });
+    logger(
+      executeCommand("pnpm install", projectPath),
+      "Installing dependencies",
+      {
+        estimate: 2000,
+      },
+    ).then(() => {
+      console.log(`\n${chalk.green.bold("Done!")}\n`);
+      process.exit(0);
+    });
+  } else {
+    console.log(`\n${chalk.green.bold("Done!")}\n`);
+    process.exit(0);
   }
-
-  console.log(`\n${chalk.green.bold("Done!")}\n`);
 }

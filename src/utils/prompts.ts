@@ -9,7 +9,7 @@ const questions: Prompt[] = [
     name: "type",
     message: "What are you building?",
     choices: [
-      { title: "New CLI", value: "cli" },
+      { title: "Generic Project", value: "generic" },
       { title: "New Next.js Project", value: "nextjs" },
       { title: "New Rust web server", value: "rust" },
       { title: "Cancel", value: "cancel" },

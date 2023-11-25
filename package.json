@@ -8,8 +8,9 @@
   },
   "type": "module",
   "engines": {
-    "node": ">=20.5.1"
+    "node": ">=20.5.0"
   },
+  "engineStrict": true,
   "scripts": {
     "dev": "node --loader ts-node/esm ./src/index.ts",
     "build": "tsc",

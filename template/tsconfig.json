@@ -1,15 +1,20 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDirs": ["./src", "./"],
     "noEmit": false,
     "target": "ESNext",
-    "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
-  }
-  // ... include/exclude as necessary
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "module": "NodeNext"
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

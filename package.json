@@ -1,6 +1,6 @@
 {
   "name": "generate-project-cli",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "A CLI for generating new projects",
   "main": "./dist/index.js",
   "bin": {

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.14](https://github.com/rosnovsky/generate-project-cli/compare/v0.0.13...v0.0.14) (2023-11-25)
+
+### Features
+
+- add basic progress indicator ([01af024](https://github.com/rosnovsky/generate-project-cli/commit/01af0249dd397c55606632ea68361192987a7886))
+- add generic project generator ([a5c0f07](https://github.com/rosnovsky/generate-project-cli/commit/a5c0f0798e84342abd152b15080dfbc731b42cb9))
+
 ### [0.0.13](https://github.com/rosnovsky/generate-project-cli/compare/v0.0.11...v0.0.13) (2023-11-24)
 
 ### Bug Fixes

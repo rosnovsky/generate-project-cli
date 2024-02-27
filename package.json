@@ -39,8 +39,8 @@
     "directory": "dist"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.3",
-    "@commitlint/config-conventional": "^18.4.3",
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
     "@types/figlet": "^1.5.8",
     "@types/node": "^20.9.5",
     "@types/prompts": "^2.4.9",
